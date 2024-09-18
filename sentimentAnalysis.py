@@ -1,13 +1,11 @@
 from textblob import TextBlob
-from textblob.en import Sentiment
 from textblob import Word
 from textblob.wordnet import VERB
 from textblob.wordnet import Synset
 
-import nltk;
-
-nltk.download('punkt_tab')
-nltk.download('averaged_perceptron_tagger_eng')
+# import nltk;
+# nltk.download('punkt_tab')
+# nltk.download('averaged_perceptron_tagger_eng')
 
 # Part-of-speech Tagging
 wiki = TextBlob("Python is a high-level, general-purpose programming language.")

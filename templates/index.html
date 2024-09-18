@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Polarity Checker</title>
+</head>
+<body>
+    <h1>Enter Text for Polarity Check</h1>
+    <form action="/feedback" method="post">
+        <input type="text" id="input" name="user_input" required>
+        <button type="submit">Check Polarity</button>
+    </form>
+ <!-- Display the result -->
+    {% if polarity %}
+        <h2>Polarity: {{ polarity }}</h2>
+        <p>Sentiment Polarity: {{ polarity }}</p>
+    {% endif %}
+</body>
+</html>
