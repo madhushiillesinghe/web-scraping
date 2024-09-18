@@ -15,6 +15,7 @@ def feedback():
 
         blob = TextBlob(input_text)
         polarity = blob.sentiment.polarity
+        value=blob.sentiment.polarity
         print(polarity)
         if polarity > 0:
             polarity = "Positive"
@@ -23,7 +24,7 @@ def feedback():
         else:
             polarity = "Neutral"
 
-    return render_template('index.html', polarity=polarity)
+    return render_template('index.html', polarity=polarity,value=value)
 
 @app.route("/rest",methods=['POST'])
 def restEndPoint():

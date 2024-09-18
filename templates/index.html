@@ -15,7 +15,9 @@
  <!-- Display the result -->
     {% if polarity %}
         <h2>Polarity: {{ polarity }}</h2>
-        <p>Sentiment Polarity: {{ polarity }}</p>
+        {% if value %}
+          <h3>value: {{ value }}</h3>
+        {%endif %}
     {% endif %}
 </body>
 </html>
